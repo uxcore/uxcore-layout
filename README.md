@@ -17,7 +17,7 @@ $ gulp server
 
 ## Usage
 
-```
+```javascript
 let Layout = require('../src');
 let {Left, Right} = Layout;
 let classnames = require('classnames');
