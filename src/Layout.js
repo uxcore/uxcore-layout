@@ -94,7 +94,8 @@ class Layout extends React.Component {
         let cls = me.processChildren();
         return <div className={classnames({
             [me.props.className]: !!me.props.className,
-            [cls.layoutCls]: true
+            [cls.layoutCls]: true,
+            "fn-clear": true
         })}>
             {!!me.left && React.cloneElement(me.left, {
                 className: classnames({
