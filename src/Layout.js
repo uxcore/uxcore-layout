@@ -30,8 +30,8 @@ class Layout extends React.Component {
             }
         });
 
-        let suffix = me.getSuffix(leftAdaptive, rightAdaptive);
-        if (suffix == 'rf') {
+        me.suffix = me.getSuffix(leftAdaptive, rightAdaptive);
+        if (me.suffix == 'rf') {
             me.rightStyle = {
                 marginLeft: -me.right.props.width
             }
@@ -39,7 +39,15 @@ class Layout extends React.Component {
                 paddingRight: me.right.props.width
             }
         }
-        return me.generateClass(suffix);
+        else if (me.suffix == 'lf') {
+            me.rightStyle = {
+                paddingLeft: me.left.props.width
+            }
+            me.leftStyle = {
+                marginRight: -me.left.props.width
+            }
+        }
+        return me.generateClass(me.suffix);
     }
 
     getSuffix(leftAdaptive, rightAdaptive) {
@@ -89,6 +97,48 @@ class Layout extends React.Component {
         }
     }
 
+    renderLeft(cls) {
+        let me = this;
+        if (!!me.left) {
+            return React.cloneElement(me.left, {
+                className: classnames({
+                    [me.left.props.className]: !!me.left.props.className,
+                    [cls.leftCls]: true
+                }),
+                style: me.leftStyle || {},
+                key: 'left'
+            })
+        }
+    }
+
+    renderRight(cls) {
+        let me = this;
+        if (!!me.right) {
+            return React.cloneElement(me.right, {
+                className: classnames({
+                    [me.right.props.className]: !!me.right.props.className,
+                    [cls.rightCls]: true
+                }),
+                style: me.rightStyle || {},
+                key: 'right'
+            })
+        }
+    }
+
+    renderLayout(cls) {
+        let me = this;
+        let arr = [];
+        if (me.suffix == 'lf') {
+            arr.push(me.renderRight(cls));
+            arr.push(me.renderLeft(cls));
+        }
+        else {
+            arr.push(me.renderLeft(cls)); 
+            arr.push(me.renderRight(cls));
+        }
+        return arr;
+    }
+
     render() {
         let me = this;
         let cls = me.processChildren();
@@ -97,20 +147,7 @@ class Layout extends React.Component {
             [cls.layoutCls]: true,
             "fn-clear": true
         })}>
-            {!!me.left && React.cloneElement(me.left, {
-                className: classnames({
-                    [me.left.props.className]: !!me.left.props.className,
-                    [cls.leftCls]: true
-                }),
-                style: me.leftStyle || {}
-            })}
-            {!!me.right && React.cloneElement(me.right, {
-                className: classnames({
-                    [me.right.props.className]: !!me.right.props.className,
-                    [cls.rightCls]: true
-                }),
-                style: me.rightStyle || {}
-            })}
+            {me.renderLayout(cls)}
         </div>
     }
 

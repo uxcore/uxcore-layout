@@ -1,6 +1,6 @@
 {
   "name": "uxcore-layout",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "uxcore-layout ui component for react",
   "main": "src/index.js",
   "scripts": {
@@ -30,9 +30,13 @@
     "gulp-just-replace": "~1.0.2",
     "gulp-less": "~3.0.3",
     "gulp-sourcemaps": "~1.5.2",
-    "webpack": "^1.10.5",
     "react": "^0.14.0",
-    "uxcore-kuma": "~1.1.0"
+    "u": "~0.1.0",
+    "uxcore-button": "~0.3.1",
+    "uxcore-form": "~1.2.0",
+    "uxcore-kuma": "~1.1.0",
+    "uxcore-menu": "~1.0.0",
+    "webpack": "^1.10.5"
   },
   "dependencies": {
     "classnames": "^2.1.2",
