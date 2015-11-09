@@ -1,15 +1,12 @@
 {
   "name": "uxcore-layout",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "uxcore-layout ui component for react",
   "main": "src/index.js",
   "scripts": {
     "dev": "gulp server"
   },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:uxcore/uxcore-layout.git"
-  },
+  "repository": "https://github.com/uxcore/uxcore-layout.git",
   "bugs": {
     "url": "http://github.com/uxcore/uxcore-layout/issues"
   },

@@ -1,7 +1,12 @@
-## 1.0.2
+## 1.0.4
 
-`FIXED` fix issue #1 
+`CHANGED` change repository to https
 
 ## 1.0.3
 
 `FIXED` fix issue #2
+
+## 1.0.2
+
+`FIXED` fix issue #1 
+
