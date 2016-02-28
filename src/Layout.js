@@ -6,6 +6,9 @@
 let Left = require("./Left");
 let Right = require("./Right");
 let classnames = require("classnames");
+let React = require('react'); 
+let ReactDOM = require('react-dom');
+
 
 class Layout extends React.Component {
     constructor(props) {

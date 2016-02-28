@@ -1,4 +1,4 @@
-let Item = require('./LayoutItem')
+let Item = require('./LayoutItem');
 
 class Left extends Item {
     constructor(props) {

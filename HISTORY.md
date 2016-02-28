@@ -1,3 +1,7 @@
+## 1.0.5
+
+`CHANGED` update scaffold
+
 ## 1.0.4
 
 `CHANGED` change repository to https
