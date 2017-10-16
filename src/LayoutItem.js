@@ -1,37 +1,39 @@
-let classnames = require('classnames');
-let assign = require('object-assign');
-let React = require('react'); 
-let ReactDOM = require('react-dom');
+const classnames = require('classnames');
+const assign = require('object-assign');
+const React = require('react');
+const PropTypes = require('prop-types');
 
 class LayoutItem extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-        }
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+  render() {
+    const me = this;
+    const style = {};
+    if (!me.props.adaptive) {
+      style.width = me.props.width;
     }
-    render() {
-        let me = this;
-        let style = {};
-        if (!me.props.adaptive) {
-            style.width = me.props.width;
-        }
-        return <div className={classnames({
-            [me.props.className]: !!me.props.className
-        })} style={assign({}, style, me.props.style)}>
-            {me.props.children}
-        </div>
-    }
-
-
-    
+    return (
+      <div
+        className={classnames({
+          [me.props.className]: !!me.props.className,
+        })}
+        style={assign({}, style, me.props.style)}
+      >
+          {me.props.children}
+      </div>
+    );
+  }
 }
 
-LayoutItem.displayName = "LayoutItem";
+LayoutItem.displayName = 'LayoutItem';
 LayoutItem.defaultProps = {
-    width: 500
+  width: 500,
 };
 LayoutItem.propTypes = {
-    width: React.PropTypes.number,
-    adaptive: React.PropTypes.bool
+  width: PropTypes.number,
+  adaptive: PropTypes.bool,
 };
+
 module.exports = LayoutItem;

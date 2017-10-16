@@ -1,5 +1,5 @@
 let Layout = require('../src');
-let {Left, Right} = Layout;
+let { Left, Right } = Layout;
 let Menu = require('uxcore-menu');
 let Form = require('uxcore-form');
 let Button = require('uxcore-button');
