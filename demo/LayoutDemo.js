@@ -7,7 +7,7 @@ const React = require('react');
 
 let SubMenu = Menu.SubMenu;
 let {
-    InputFormField,
+  InputFormField,
   FormRow,
   OtherFormField,
   DateFormField,
@@ -67,22 +67,34 @@ class Demo extends React.Component {
   }
 
   render() {
-    let me = this;
+    const me = this;
     return (<div>
       <p>左侧自适应，右侧固定</p>
       <Layout className="layoutDemo">
-        <Left adaptive className="left"><span onClick={me.handleFRClick.bind(me, 'left')}>左</span></Left>
-        <Right width={190} className="right"><span onClick={me.handleFRClick.bind(me, 'right')}>右</span></Right>
+        <Left adaptive className="left">
+          <span onClick={me.handleFRClick.bind(me, 'left')}>左</span>
+        </Left>
+        <Right width={190} className="right">
+          <span onClick={me.handleFRClick.bind(me, 'right')}>右</span>
+        </Right>
       </Layout>
       <p>右侧自适应，左侧固定</p>
       <Layout className="layoutDemo">
-        <Left width={190} className="left"><span onClick={me.handleFRClick.bind(me, 'left')}>左</span></Left>
-        <Right adaptive className="right"><span onClick={me.handleFRClick.bind(me, 'right')}>右</span></Right>
+        <Left width={190} className="left">
+          <span onClick={me.handleFRClick.bind(me, 'left')}>左</span>
+        </Left>
+        <Right adaptive className="right">
+          <span onClick={me.handleFRClick.bind(me, 'right')}>右</span>
+        </Right>
       </Layout>
       <p>左右都固定</p>
       <Layout className="layoutDemo fixed">
-        <Left width={500} className="left"><span onClick={me.handleFRClick.bind(me, 'left')}>左</span></Left>
-        <Right width={500} className="right"><span onClick={me.handleFRClick.bind(me, 'right')}>右</span></Right>
+        <Left width={500} className="left">
+          <span onClick={me.handleFRClick.bind(me, 'left')}>左</span>
+        </Left>
+        <Right width={500} className="right">
+          <span onClick={me.handleFRClick.bind(me, 'right')}>右</span>
+        </Right>
       </Layout>
       <p>实际场景</p>
       <Layout className="demo4">
@@ -93,13 +105,19 @@ class Demo extends React.Component {
             selectedKeys={[this.state.current]}
             mode="inline"
           >
-            <SubMenu key="sub1" title={<span><i className="kuma-icon kuma-icon-email"></i><span>导航一</span></span>}>
+            <SubMenu
+              key="sub1"
+              title={<span><i className="kuma-icon kuma-icon-email"></i><span>导航一</span></span>}
+            >
               <Menu.Item key="1">选项1</Menu.Item>
               <Menu.Item key="2">选项2</Menu.Item>
               <Menu.Item key="3">选项3</Menu.Item>
               <Menu.Item key="4">选项4</Menu.Item>
             </SubMenu>
-            <SubMenu key="sub2" title={<span><i className="kuma-icon kuma-icon-wangwang"></i><span>导航二</span></span>}>
+            <SubMenu
+              key="sub2"
+              title={<span><i className="kuma-icon kuma-icon-wangwang"></i><span>导航二</span></span>}
+            >
               <Menu.Item key="5">选项5</Menu.Item>
               <Menu.Item key="6">选项6</Menu.Item>
               <SubMenu key="sub3" title="三级导航">
@@ -107,7 +125,10 @@ class Demo extends React.Component {
                 <Menu.Item key="8">选项8</Menu.Item>
               </SubMenu>
             </SubMenu>
-            <SubMenu key="sub4" title={<span><i className="kuma-icon kuma-icon-boss"></i><span>导航三</span></span>}>
+            <SubMenu
+              key="sub4"
+              title={<span><i className="kuma-icon kuma-icon-boss"></i><span>导航三</span></span>}
+            >
               <Menu.Item key="9">选项9</Menu.Item>
               <Menu.Item key="10">选项10</Menu.Item>
               <Menu.Item key="11">选项11</Menu.Item>
@@ -118,40 +139,53 @@ class Demo extends React.Component {
         <Right adaptive>
           <Form ref="form">
             <FormRow>
-              <InputFormField className="J_enter" jsxplaceholder="输入 xxxx 进行查询" jsxshowLabel={false} jsxname="search" />
+              <InputFormField
+                className="J_enter"
+                jsxplaceholder="输入 xxxx 进行查询"
+                jsxshowLabel={false} jsxname="search"
+              />
               <OtherFormField jsxflex={2}>
                 <div className="demo-updown" onClick={me.handleSearchClick.bind(me)}>
-                  <a href="javascript:;">高级查询</a><i className={classnames({
-                    'kuma-icon': true,
-                    'kuma-icon-title-up': me.state.showAdSearch,
-                    'kuma-icon-title-down': !me.state.showAdSearch,
-                  })}
+                  <a href="javascript:void(0);">高级查询</a>
+                  <i
+                    className={classnames({
+                      'kuma-icon': true,
+                      'kuma-icon-title-up': me.state.showAdSearch,
+                      'kuma-icon-title-down': !me.state.showAdSearch,
+                    })}
                   ></i>
                 </div>
               </OtherFormField>
             </FormRow>
-            <FormRow className={classnames({
-              'f-dn': !me.state.showAdSearch,
-            })}
+            <FormRow
+              className={classnames({
+                'f-dn': !me.state.showAdSearch,
+              })}
             >
               <InputFormField jsxlabel="名称" jsxname="input1" />
-              <DateFormField jsxlabel="名称" jsxname="date1" jsxtype="cascade" style={{
-                width: 100,
-              }}
+              <DateFormField
+                jsxlabel="名称"
+                jsxname="date1"
+                jsxtype="cascade"
+                style={{
+                  width: 100,
+                }}
               />
             </FormRow>
-            <FormRow className={classnames({
-              'f-dn': !me.state.showAdSearch,
-            })}
+            <FormRow
+              className={classnames({
+                'f-dn': !me.state.showAdSearch,
+              })}
             >
-              <SelectFormField className="select2"
+              <SelectFormField
+                className="select2"
                 jsxfetchUrl="http://suggest.taobao.com/sug"
                 jsxmultiple
                 jsxname="select2"
                 jsxlabel="名称"
                 afterFetch={(obj) => {
-                  let data = {};
-                  obj.result.forEach((item, index) => {
+                  const data = {};
+                  obj.result.forEach((item) => {
                     data[item[1]] = item[0];
                   });
                   console.log(data);
@@ -164,9 +198,10 @@ class Demo extends React.Component {
                 <Item value="3" text="名称" />
               </CheckboxGroupFormField>
             </FormRow>
-            <FormRow className={classnames({
-              'f-dn': !me.state.showAdSearch,
-            })}
+            <FormRow
+              className={classnames({
+                'f-dn': !me.state.showAdSearch,
+              })}
             >
               <OtherFormField className="button1">
                 <Button type="primary" onClick={me.handleSubmitClick.bind(me)}>提交</Button>
@@ -177,7 +212,6 @@ class Demo extends React.Component {
         </Right>
       </Layout>
     </div>);
-
   }
 }
 

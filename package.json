@@ -48,7 +48,7 @@
   "dependencies": {
     "classnames": "^2.1.2",
     "object-assign": "^4.0.0",
-    "prop-types": "^15.6.0"
+    "prop-types": "15.x"
   },
   "peerDependencies": {
     "react": ">=0.13.0"
