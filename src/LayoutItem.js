@@ -1,7 +1,8 @@
-const classnames = require('classnames');
-const assign = require('object-assign');
-const React = require('react');
-const PropTypes = require('prop-types');
+import classnames from 'classnames';
+import assign from 'object-assign';
+import React from 'react';
+import PropTypes from 'prop-types';
+
 
 class LayoutItem extends React.Component {
   constructor(props) {
@@ -36,4 +37,4 @@ LayoutItem.propTypes = {
   adaptive: PropTypes.bool,
 };
 
-module.exports = LayoutItem;
+export default LayoutItem;

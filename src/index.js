@@ -6,4 +6,6 @@
  * All rights reserved.
  */
 
-module.exports = require('./Layout');
+import Layout from './Layout';
+
+export default Layout;

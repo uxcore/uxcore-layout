@@ -1,4 +1,4 @@
-const Item = require('./LayoutItem');
+import Item from './LayoutItem';
 
 class Right extends Item {
   constructor(props) {
@@ -10,4 +10,5 @@ class Right extends Item {
 Right.displayName = 'Right';
 Right.defaultProps = Item.defaultProps;
 Right.propTypes = Item.propTypes;
-module.exports = Right;
+
+export default Right;
