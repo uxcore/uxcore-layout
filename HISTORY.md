@@ -1,6 +1,6 @@
 # History
 
-## 1.0.6
+## 1.0.7
 
 `CHANGE` adapted React 15.x
 
