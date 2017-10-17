@@ -3,10 +3,11 @@
 * @time:   10/26 2015
 */
 
-const Left = require('./Left');
-const Right = require('./Right');
-const classnames = require('classnames');
-const React = require('react');
+
+import Left from './Left';
+import Right from './Right';
+import classnames from 'classnames';
+import React from 'react';
 
 
 class Layout extends React.Component {
@@ -157,4 +158,5 @@ Layout.Right = Right;
 Layout.displayName = 'Layout';
 Layout.defaultProps = {};
 Layout.propTypes = {};
-module.exports = Layout;
+
+export default Layout;

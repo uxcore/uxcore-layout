@@ -1,5 +1,9 @@
 # History
 
+## 1.0.8
+
+`CHANGE` export ES Module 
+
 ## 1.0.7
 
 `CHANGE` adapted React 15.x
