@@ -1,3 +1,9 @@
+# History
+
+## 1.0.7
+
+`CHANGE` adapted React 15.x
+
 ## 1.0.5
 
 `CHANGED` update scaffold
