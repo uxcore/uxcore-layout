@@ -1,6 +1,6 @@
 {
  "name": "uxcore-layout",
- "version": "1.0.7",
+ "version": "1.0.8",
  "description": "uxcore-layout ui component for react",
  "main": "build/index.js",
  "scripts": {
