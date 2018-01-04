@@ -1,10 +1,29 @@
-## uxcore-layout [![Dependency Status](http://img.shields.io/david/uxcore/uxcore-layout.svg?style=flat-square)](https://david-dm.org/uxcore/uxcore-layout) [![devDependency Status](http://img.shields.io/david/dev/uxcore/uxcore-layout.svg?style=flat-square)](https://david-dm.org/uxcore/uxcore-layout#info=devDependencies) 
+## uxcore-layout
 
-![](http://gtms04.alicdn.com/tps/i4/TB158DGKXXXXXa8XpXX3gDJ7VXX-1014-711.png)
 
-## TL;DR
+[![NPM version][npm-image]][npm-url]
+[![build status][travis-image]][travis-url]
+[![Test Coverage][coveralls-image]][coveralls-url]
+[![Dependency Status][dep-image]][dep-url]
+[![devDependency Status][devdep-image]][devdep-url]
+[![NPM downloads][downloads-image]][npm-url]
 
-uxcore-layout ui component for react, helping you to make an adaptive layout fastly
+[![Sauce Test Status][sauce-image]][sauce-url]
+
+[npm-image]: http://img.shields.io/npm/v/uxcore-layout.svg?style=flat-square
+[npm-url]: http://npmjs.org/package/uxcore-layout
+[travis-image]: https://img.shields.io/travis/uxcore/uxcore-layout.svg?style=flat-square
+[travis-url]: https://travis-ci.org/uxcore/uxcore-layout
+[coveralls-image]: https://img.shields.io/coveralls/uxcore/uxcore-layout.svg?style=flat-square
+[coveralls-url]: https://coveralls.io/r/uxcore/uxcore-layout?branch=master
+[dep-image]: http://img.shields.io/david/uxcore/uxcore-layout.svg?style=flat-square
+[dep-url]: https://david-dm.org/uxcore/uxcore-layout
+[devdep-image]: http://img.shields.io/david/dev/uxcore/uxcore-layout.svg?style=flat-square
+[devdep-url]: https://david-dm.org/uxcore/uxcore-layout#info=devDependencies
+[downloads-image]: https://img.shields.io/npm/dm/uxcore-layout.svg
+[sauce-image]: https://saucelabs.com/browser-matrix/uxcore-layout.svg
+[sauce-url]: https://saucelabs.com/u/uxcore
+
 
 #### setup develop environment
 
@@ -12,7 +31,7 @@ uxcore-layout ui component for react, helping you to make an adaptive layout fas
 $ git clone https://github.com/uxcore/uxcore-layout
 $ cd uxcore-layout
 $ npm install
-$ gulp server
+$ npm start
 ```
 
 ## Usage
@@ -65,8 +84,8 @@ module.exports = Demo;
 
 | 配置项 | 类型 | 必填 | 默认值 | 功能/备注 |
 |---|---|---|---|---|
-|className|string|optional|""|加入额外的类名，在使用 kuma 的基础上进行适当的定制时会用得到|
+|className|string|optional| |加入额外的类名，在使用 kuma 的基础上进行适当的定制时会用得到|
 |width|number|optional|500|布局块的宽度，仅在定宽时起作用|
-|adaptive|boolean|optional|false|是否为自适应，未设定 adaptive=true 的一侧，则为定宽，不可两者皆为自适应|
+|adaptive|boolean|optional| |是否为自适应，未设定 adaptive=true 的一侧，则为定宽，不可两者皆为自适应|
 
 
