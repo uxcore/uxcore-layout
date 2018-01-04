@@ -28,7 +28,7 @@ class Layout extends React.Component {
       // 左侧自适应，右侧定宽，rf
       suffix = 'rf';
     } else {
-      console.error('left and right cannot be both adaptive, layout generation failed');
+      // console.error('left and right cannot be both adaptive, layout generation failed');
     }
     return suffix;
   }
@@ -79,7 +79,7 @@ class Layout extends React.Component {
     } else if (length === 3) {
       layoutCls = 'kuma-layout-3c';
     } else {
-      console.error('children length should be 2 or 3, layout generation failed');
+      // console.error('children length should be 2 or 3, layout generation failed');
     }
 
     leftCls = `${layoutCls}-left-${suffix}`;

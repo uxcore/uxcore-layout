@@ -69,6 +69,11 @@ class Demo extends React.Component {
   render() {
     const me = this;
     return (<div>
+      <p>默认</p>
+      <Layout>
+        <Left/>
+        <Right/>
+      </Layout>
       <p>左侧自适应，右侧固定</p>
       <Layout className="layoutDemo">
         <Left adaptive className="left">
