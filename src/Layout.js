@@ -91,7 +91,6 @@ class Layout extends React.Component {
       rightCls,
     };
   }
-
   renderLeft(cls) {
     const me = this;
     if (!!me.left) {
