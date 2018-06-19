@@ -1,59 +1,59 @@
 {
- "name": "uxcore-layout",
- "version": "1.0.8",
- "description": "uxcore-layout ui component for react",
- "main": "build/index.js",
- "scripts": {
-  "start": "uxcore-tools run start",
-  "server": "uxcore-tools run server",
-  "lint": "uxcore-tools run lint",
-  "build": "uxcore-tools run build",
-  "test": "uxcore-tools run test",
-  "coverage": "uxcore-tools run coverage",
-  "pub": "uxcore-tools run pub",
-  "dep": "uxcore-tools run dep",
-  "tnpm-dep": "uxcore-tools run tnpm-dep",
-  "chrome": "uxcore-tools run chrome",
-  "browsers": "uxcore-tools run browsers",
-  "saucelabs": "uxcore-tools run saucelabs",
-  "update": "uxcore-tools run update",
-  "tnpm-update": "uxcore-tools run tnpm-update"
- },
- "repository": "https://github.com/uxcore/uxcore-layout.git",
- "bugs": {
-  "url": "http://github.com/uxcore/uxcore-layout/issues"
- },
- "keywords": [
-  "react",
-  "react-component",
-  "react-uxcore-layout",
-  "uxcore-layout"
- ],
- "devDependencies": {
-  "console-polyfill": "^0.2.2",
-  "enzyme": "^3.0.0",
-  "enzyme-adapter-react-15": "^1.0.0",
-  "es5-shim": "^4.5.8",
-  "expect.js": "~0.3.1",
-  "kuma-base": "1.x",
-  "react": "15.x",
-  "react-dom": "15.x",
-  "react-test-renderer": "15.x",
-  "uxcore-button": "~0.3.1",
-  "uxcore-form": "~1.2.0",
-  "uxcore-kuma": "*",
-  "uxcore-menu": "~1.0.0",
-  "uxcore-tools": "^0.2.47"
- },
- "dependencies": {
-  "classnames": "^2.1.2",
-  "object-assign": "^4.0.0",
-  "prop-types": "15.x"
- },
- "peerDependencies": {
-  "react": ">=0.13.0"
- },
- "author": "",
- "contributors": [],
- "license": "MIT"
+  "name": "uxcore-layout",
+  "version": "1.1.0",
+  "description": "uxcore-layout ui component for react",
+  "main": "build/index.js",
+  "scripts": {
+    "start": "uxcore-tools run start",
+    "server": "uxcore-tools run server",
+    "lint": "uxcore-tools run lint",
+    "build": "uxcore-tools run build",
+    "test": "uxcore-tools run test",
+    "coverage": "uxcore-tools run coverage",
+    "pub": "uxcore-tools run pub",
+    "dep": "uxcore-tools run dep",
+    "tnpm-dep": "uxcore-tools run tnpm-dep",
+    "chrome": "uxcore-tools run chrome",
+    "browsers": "uxcore-tools run browsers",
+    "saucelabs": "uxcore-tools run saucelabs",
+    "update": "uxcore-tools run update",
+    "tnpm-update": "uxcore-tools run tnpm-update"
+  },
+  "repository": "https://github.com/uxcore/uxcore-layout.git",
+  "bugs": {
+    "url": "http://github.com/uxcore/uxcore-layout/issues"
+  },
+  "keywords": [
+    "react",
+    "react-component",
+    "react-uxcore-layout",
+    "uxcore-layout"
+  ],
+  "devDependencies": {
+    "console-polyfill": "*",
+    "enzyme": "*",
+    "expect.js": "*",
+    "kuma-base": "1.x",
+    "react": "16.x",
+    "react-dom": "16.x",
+    "react-test-renderer": "16.x",
+    "uxcore-button": "*",
+    "uxcore-form": "*",
+    "uxcore-kuma": "*",
+    "uxcore-menu": "*",
+    "uxcore-tools": "*",
+    "babel-polyfill": "6.x",
+    "enzyme-adapter-react-16": "1.x"
+  },
+  "dependencies": {
+    "classnames": "^2.1.2",
+    "object-assign": "^4.0.0",
+    "prop-types": "15.x"
+  },
+  "peerDependencies": {
+    "react": ">=0.13.0"
+  },
+  "author": "",
+  "contributors": [],
+  "license": "MIT"
 }
