@@ -8,6 +8,7 @@ import Left from './Left';
 import Right from './Right';
 import classnames from 'classnames';
 import React from 'react';
+import PropTypes from 'prop-types';
 
 
 class Layout extends React.Component {
@@ -69,15 +70,16 @@ class Layout extends React.Component {
 
   generateClass(suffix) {
     const me = this;
+    const prefixCls = me.props.prefixCls;
     const length = React.Children.count(me.props.children);
     let layoutCls = '';
     let leftCls = '';
     let rightCls = '';
 
     if (length === 2) {
-      layoutCls = 'kuma-layout-2c';
+      layoutCls = `${prefixCls}-2c`;
     } else if (length === 3) {
-      layoutCls = 'kuma-layout-3c';
+      layoutCls = `${prefixCls}-3c`;
     } else {
       // console.error('children length should be 2 or 3, layout generation failed');
     }
@@ -155,7 +157,11 @@ class Layout extends React.Component {
 Layout.Left = Left;
 Layout.Right = Right;
 Layout.displayName = 'Layout';
-Layout.defaultProps = {};
-Layout.propTypes = {};
+Layout.defaultProps = {
+  prefixCls: 'kuma-layout'
+};
+Layout.propTypes = {
+  prefixCls: PropTypes.string
+};
 
 export default Layout;
