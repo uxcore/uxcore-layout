@@ -1,5 +1,8 @@
 # History
 
+## 1.2.0
+`CHANGED` support js style export
+
 ## 1.0.8
 
 `CHANGE` export ES Module 
